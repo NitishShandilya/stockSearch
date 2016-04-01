@@ -19,134 +19,111 @@
 body{
 background-color: #1C5171;
 }
+#hline{
+margin-left: 40px;
+margin-right: 40px;
+color: white;
+}
 .search_box{
 border-radius: 10px;
 background-color: white;
-margin-top:10px
+margin: 100px;
+padding: 5px;
 }
-hr {
-margin-left: 40px;
-margin-right: 40px;
-}
-.panel-container {
-    padding-right: 0;
-    padding-left: 0;
-}
+
 </style>
 
 </head>
 <body>
-	<!--<div class="search_box">-->
+    <div class="search_box">
+    <h3 style="text-align:center">Stock Market Search</h3>
+    <form class="form-horizontal" role="form" method="get">                        
+        <div class="form-group">
+            <label class="control-label col-md-3" for="stock_text">Enter the stock name or symbol
+            <span style="color:red">*</span></label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="stock_text">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary" name="Search" id="Search">
+                    <span class="glyphicon glyphicon-search"></span>Get Quote
+                </button>
+                <button type="button" class="btn" id="Clear">
+                    <span class="glyphicon glyphicon-refresh" style="color:black"></span><span style="color:black">Clear</span>
+                </button>
+            </div>
+			 <div class="col-md-1"></div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-9"></div>
+            
+            <div class="col-md-3">
+                <label class="control-label">Powered by: <a href="http://dev.markitondemand.com/MODApis/"><img src="http://cs-server.usc.edu:45678/hw/hw8/images/mod-logo.png" width=100 height=25></a></label>
+            </div>        
+        </div>
+        
+    </form>
+    </div>                
+
+	<hr id="hline">
 	
-	<form class="form-horizontal" role="form" method="get">
-		<div class="container search_box">
-		<h3 style="text-align:center">Stock Market Search</h3>		
-		<div class="form-group">
-			<label class="control-label col-md-3" for="stock_text">Enter the stock name or symbol
-			<span style="color:red">*</span></label>
-			<div class="col-md-1"></div>
-			<div class="col-md-5">
-				<input type="text" class="form-control" id="stock_text">
-			</div>
-			<div class="col-md-3">
-				<button type="submit" class="btn btn-primary" name="Search" id="Search">
-					<span class="glyphicon glyphicon-search"></span>Get Quote
-				</button>
-				<button type="button" class="btn" id="Clear">
-					<span class="glyphicon glyphicon-refresh" style="color:black"></span><span style="color:black">Clear</span>
-				</button>
-			</div>			
-		</div>
+	
+	<div class="search_box">
+	
+		<div class="panel panel-default">
 		
-		<div class="form-group">
-			<div class="col-md-9"></div>
-			
-			<div class="col-md-3">
-				<label class="control-label">Powered by: <a href="http://dev.markitondemand.com/MODApis/"><img src="http://cs-server.usc.edu:45678/hw/hw8/images/mod-logo.png" width=100 height=25></a></label>
-			</div>			
-		</div>
-		</div>
+		 <div class="panel-heading">
+					  <label class="control-label col-md-2">Favorite List</label>
+					  
+					  <div class="col-md-6"></div>
+					  <div class="col-md-4">
+					  <label class="control-label">Automatic refresh</label>
+					   
+					   <input type="checkbox" data-toggle="toggle">
+					   <button type="button" class="btn">
+								<span class="glyphicon glyphicon-refresh" style="color:black"></span>
+					   </button>
+					   </div>
+          </div>
+		  
 		
-	</form>
-	<!--</div>-->
-	<hr>
-	<div class="container search_box">
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
-  <!-- Indicators 
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  </ol>-->
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">	
-		<div class="panel panel-default" style="margin-top:20px">
-			<!-- Default panel contents -->
-			<div class="panel-heading">
-			<div class="row">
-				<div class="col-md-2 text-left">
-					<h5 style="font-weight:bold">Favorite List</h5>
-				</div>				
-				<div class="col-md-6 text-center"></div>
-				<div class="col-md-4 text-right">
-						<span class="hidden-xs hidden-sm">Automatic refresh:</span>   				   
-						<input type="checkbox" data-toggle="toggle">
-						<button type="button" class="btn">
-   							 <span class="glyphicon glyphicon-refresh" style="color:black"></span>
-						</button>
-						<a href="#carousel-example-generic" role="button" data-slide="next">
-							<button type="button" class="btn"><span class="glyphicon glyphicon-chevron-right" style="color:black"></span></button>
-						</a>
-				</div>				
-			</div>
-			</div>
-				<div class="panel-body">
-					<table class = "table table-striped">
-							<tr><td>Hello<td>Heelo</tr>
-							<tr><td>Hello<td>Heelo</tr>
-						</table>
-				</div>				
-			</div>
-		
-    </div>
-    <div class="item">
-      <div class="panel panel-default" style="margin-top:20px">
-			<!-- Default panel contents -->
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-md-1 text-left">
-						<a href="#carousel-example-generic" role="button" data-slide="prev">
-							<button type="button" class="btn"><span class="glyphicon glyphicon-chevron-left" style="color:black"></span></button>
-						</a>
-					</div>
-					<div class="col-md-10 text-center"><h5 style="font-weight:bold">Stock Details</h5></div>
-					<div class="col-md-1"></div>
-				</div>
-			</div>
-			<div class="panel-body">
-				<table class = "table table-striped">
-					<tr><td>Hello<td>Heelo</tr>
-						<tr><td>Hello<td>Heelo</tr>
-				</table>
-			</div>				
 		</div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <!--<a href="#carousel-example-generic" role="button" data-slide="next">
-    <button type="button" class="btn"><span class="glyphicon glyphicon-chevron-right"></span></button>
-  </a>-->
-  <!--
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>-->
-</div>
-</div>
-
-
+	</div>
+	
+	<div class="search_box">
+	
+	 	   <ul class="nav nav-pills">
+				  <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-refresh"></span>&nbsp Current Stock</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-dashboard"></span>&nbsp Historical Charts</a></li>
+				  <li role="presentation"><a href="#"><span class="glyphicon glyphicon-link"></span>&nbsp News Feeds</a></li>
+				  
+			</ul>
+			<br>
+			Stock details
+			<div class="table-responsive ">          
+			 <table class="table">
+				<tr><th>Name<td> </tr>
+				<tr><th>Symbol<td>$Symbol</tr>
+				<tr><th>Last Price<td>$LastPrice</tr>
+				<tr><th>Change<td>$Change<img src=$ChangeImage height=\"10px\" width=\"10px\"></tr>
+				<tr><th>Change Percent<td>$ChangePercent%<img src=$ChangePercentImage height=\"10px\" width=\"10px\"></tr>
+				<tr><th>Timestamp<td>$Timestamp</tr>
+				<tr><th>Market Cap<td>$MarketCap</tr>
+				<tr><th>Volume<td>$Volume</tr>
+				<tr><th>Change YTD<td>$ChangeYTD<img src=$ChangeYTDImage height=\"10px\" width=\"10px\"></tr>
+				<tr><th>Change Percent YTD<td>$ChangePercentYTD%<img src=$ChangePercentYTDImage height=\"10px\" width=\"10px\">
+				</tr>
+				<tr><th>High<td>$High</tr>
+				<tr><th>Low<td>$Low</tr>
+				<tr><th>Open<td>$Open</tr>	
+			 </table>
+	        </div>
+		
+	 
+	</div>
+	
 <noscript>
 </body>
 </html>
+
